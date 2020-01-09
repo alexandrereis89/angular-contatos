@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
+import { Contact } from 'src/app/model/Contact';
 
 @Component({
   selector: 'app-contact-box',
@@ -6,10 +7,12 @@ import { Component, OnInit } from '@angular/core';
   styles: []
 })
 export class ContactBoxComponent implements OnInit {
+  @Input() contact: Contact
 
   constructor() { }
 
   ngOnInit() {
+    console.log('box', this.contact)
   }
 
 }

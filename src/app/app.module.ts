@@ -11,6 +11,7 @@ import { SearchComponent } from './features/search/search.component';
 import { ContactListComponent } from './features/contact-list/contact-list.component';
 import { ContactFormComponent } from './features/contact-form/contact-form.component';
 import { ContactBoxComponent } from './features/contact-box/contact-box.component';
+import { MatListModule } from '@angular/material/list';
 
 @NgModule({
 	declarations: [
@@ -26,7 +27,8 @@ import { ContactBoxComponent } from './features/contact-box/contact-box.componen
 	imports: [
 		BrowserModule,
 		AppRoutingModule,
-		BrowserAnimationsModule
+		BrowserAnimationsModule,
+		MatListModule
 	],
 	providers: [],
 	bootstrap: [AppComponent]
