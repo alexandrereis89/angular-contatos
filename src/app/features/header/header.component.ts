@@ -1,15 +1,19 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
+
 
 @Component({
-  selector: 'app-header',
-  templateUrl: './header.component.html',
-  styles: []
+   selector: 'app-header',
+   templateUrl: './header.component.html',
+   styles: []
 })
 export class HeaderComponent implements OnInit {
 
-  constructor() { }
+   constructor(
+      private route: ActivatedRoute,
+   ) { }
 
-  ngOnInit() {
-  }
+   ngOnInit() {
+   }
 
 }

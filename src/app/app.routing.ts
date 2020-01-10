@@ -10,6 +10,10 @@ const routes: Routes = [
 		component: HomeComponent,
 		pathMatch: "full"
 	},
+   {
+      path: "novo",
+      component: DetailComponent
+   },
 	{
 		path: "edit/:contactId",
 		component: DetailComponent
@@ -17,7 +21,7 @@ const routes: Routes = [
 	{
 		path: "**",
 		component: HomeComponent
-	}
+   },
 ];
 
 

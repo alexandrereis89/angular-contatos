@@ -1,26 +1,34 @@
 import { Component, OnInit } from "@angular/core";
-import { ActivatedRoute } from "@angular/router";
+import { ActivatedRoute, Router } from "@angular/router";
 import { Contact } from 'src/app/model/Contact';
 @Component({
-	selector: "app-detail",
-	templateUrl: "./detail.component.html",
-	styleUrls: ["./detail.component.scss"]
+   selector: "app-detail",
+   templateUrl: "./detail.component.html",
+   styleUrls: ["./detail.component.scss"]
 })
 export class DetailComponent implements OnInit {
-	contacId: Number;
-	contact: Contact = new Contact();
-	constructor(
-		private route: ActivatedRoute
-	) { }
-	ngOnInit() {	
+   contacId: Number;
+   contact: Contact = Object.assign(JSON.parse(sessionStorage.getItem('contato')) || {});
+   constructor(
+      private router: Router
+   ) { }
 
-		this.contact = JSON.parse(sessionStorage.getItem('contato'));
+   ngOnInit() {
+      sessionStorage.removeItem('contato');
+   }
+   
+   save(): void {
+      let contactList: Contact[] = JSON.parse(sessionStorage.getItem('contactList'));
 
-		console.log(this.contact)
+      if (!this.contact.id) {
+         this.contact.id = contactList.length + 1;
+      }else{
+         contactList = contactList.filter(c => c.id != this.contact.id);
+         console.log('filtrada', contactList)
+      }
 
-	}
-
-	save(): void {
-		console.log(this.contact)
-	}
+      contactList.push(this.contact);
+      sessionStorage.setItem('contactList', JSON.stringify(contactList));
+      this.router.navigate(['/']);
+   }
 }

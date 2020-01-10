@@ -9,7 +9,6 @@ import { DetailComponent } from './pages/detail/detail.component';
 import { HeaderComponent } from './features/header/header.component';
 import { SearchComponent } from './features/search/search.component';
 import { ContactListComponent } from './features/contact-list/contact-list.component';
-import { ContactFormComponent } from './features/contact-form/contact-form.component';
 import { ContactBoxComponent } from './features/contact-box/contact-box.component';
 import { MatIconModule } from "@angular/material/icon";
 import { MatButtonModule } from "@angular/material/button";
@@ -19,6 +18,7 @@ import { MatCardModule } from "@angular/material/card";
 import { MatDialogModule } from "@angular/material/dialog";
 import { MatInputModule } from "@angular/material";
 import { MatFormFieldModule } from "@angular/material/form-field";
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
 	declarations: [
@@ -28,11 +28,11 @@ import { MatFormFieldModule } from "@angular/material/form-field";
 		HeaderComponent,
 		SearchComponent,
 		ContactListComponent,
-		ContactFormComponent,
 		ContactBoxComponent
 	],
 	imports: [
-		BrowserModule,
+      BrowserModule,
+      FormsModule,
 		AppRoutingModule,
 		BrowserAnimationsModule,
 		MatIconModule,

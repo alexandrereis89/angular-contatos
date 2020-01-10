@@ -8,18 +8,20 @@
    
    <form class="example-form">
       <mat-form-field class="example-full-width">
-        <input matInput placeholder="Nome" name="nome" [(value)]="contact.name">
+        <input matInput placeholder="Nome" name="nome" [(ngModel)]="contact.name">
       </mat-form-field>
       
       <mat-form-field class="example-full-width">
-         <input matInput placeholder="E-mail" name="email" type="email" [(value)]="contact.email">
+         <input matInput placeholder="E-mail" name="email" type="email" [(ngModel)]="contact.email">
        </mat-form-field>
 
        <mat-form-field class="example-full-width">
-         <input matInput placeholder="Telefone" name="phoneNumber" [(value)]="contact.phoneNumber">
+         <input matInput placeholder="Telefone" name="phoneNumber" type="number" [(ngModel)]="contact.phoneNumber">
        </mat-form-field>
     </form>
-    <button mat-flat-button color="primary" (click)="save()" aria-label="Voltar">
-       salvar
+    <button mat-flat-button color="primary" (click)="save()" aria-label="Salvar">
+       Salvar
    </button>
 </section>
+
+
