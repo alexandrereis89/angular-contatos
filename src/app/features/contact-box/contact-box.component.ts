@@ -1,5 +1,6 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { Contact } from 'src/app/model/Contact';
+import { Router, ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-contact-box',
@@ -11,10 +12,18 @@ import { Contact } from 'src/app/model/Contact';
 export class ContactBoxComponent implements OnInit {
   @Input() contact: Contact
 
-  constructor() { }
+  constructor(
+    public router: Router,
+		private route: ActivatedRoute
+    
+  ) { }
 
   ngOnInit() {
     
+  }
+
+  detalhe(id: Number): void {
+    localStorage.setItem('contato', JSON.stringify(this.contact));
   }
 
 }

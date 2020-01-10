@@ -12,7 +12,15 @@ export class DetailComponent implements OnInit {
 	constructor(
 		private route: ActivatedRoute
 	) { }
-	ngOnInit() {		
-		this.contacId = this.route.snapshot.params.contacId;
+	ngOnInit() {	
+
+		this.contact = JSON.parse(sessionStorage.getItem('contato'));
+
+		console.log(this.contact)
+
+	}
+
+	save(): void {
+		console.log(this.contact)
 	}
 }

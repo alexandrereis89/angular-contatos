@@ -4,10 +4,22 @@
       <mat-icon>keyboard_arrow_left</mat-icon> Voltar
    </button>
    <h2>{{ contact.name }}</h2>
-   <mat-card>
-      <mat-card-content>
-         <h4>Postado por:</h4>
-      </mat-card-content>
-   </mat-card>
-   <h2>Fotos</h2>
+   
+   
+   <form class="example-form">
+      <mat-form-field class="example-full-width">
+        <input matInput placeholder="Nome" name="nome" [(value)]="contact.name">
+      </mat-form-field>
+      
+      <mat-form-field class="example-full-width">
+         <input matInput placeholder="E-mail" name="email" type="email" [(value)]="contact.email">
+       </mat-form-field>
+
+       <mat-form-field class="example-full-width">
+         <input matInput placeholder="Telefone" name="phoneNumber" [(value)]="contact.phoneNumber">
+       </mat-form-field>
+    </form>
+    <button mat-flat-button color="primary" (click)="save()" aria-label="Voltar">
+       salvar
+   </button>
 </section>

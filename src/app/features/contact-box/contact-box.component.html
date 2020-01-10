@@ -1,4 +1,4 @@
-<mat-card class="albumBoxItem" routerLink="/detail/{{ contact.id }}">
+<mat-card class="albumBoxItem" routerLink="/edit/{{ contact.id }}"  (click)="detalhe(contact.id)">
    <mat-card-header>      
    <mat-card-title>{{ contact.name }}</mat-card-title>
       <mat-card-subtitle>{{ contact.email }}</mat-card-subtitle>
