@@ -11,7 +11,14 @@ import { SearchComponent } from './features/search/search.component';
 import { ContactListComponent } from './features/contact-list/contact-list.component';
 import { ContactFormComponent } from './features/contact-form/contact-form.component';
 import { ContactBoxComponent } from './features/contact-box/contact-box.component';
-import { MatListModule } from '@angular/material/list';
+import { MatIconModule } from "@angular/material/icon";
+import { MatButtonModule } from "@angular/material/button";
+import { MatToolbarModule } from "@angular/material/toolbar";
+import { MatListModule } from "@angular/material/list";
+import { MatCardModule } from "@angular/material/card";
+import { MatDialogModule } from "@angular/material/dialog";
+import { MatInputModule } from "@angular/material";
+import { MatFormFieldModule } from "@angular/material/form-field";
 
 @NgModule({
 	declarations: [
@@ -28,7 +35,14 @@ import { MatListModule } from '@angular/material/list';
 		BrowserModule,
 		AppRoutingModule,
 		BrowserAnimationsModule,
-		MatListModule
+		MatIconModule,
+		MatButtonModule,
+		MatToolbarModule,
+		MatListModule,
+		MatCardModule,
+		MatDialogModule,
+		MatInputModule,
+		MatFormFieldModule
 	],
 	providers: [],
 	bootstrap: [AppComponent]

@@ -19,17 +19,17 @@ export class HomeComponent implements OnInit {
 			{
 				id: 1,
 				email: 'teste@teste.com.br',
-				name: 'alexandre',
+				name: 'alexandre reveilleau dos reis',
 				phoneNumber: '54 99999-9999'
 			},
 			{
 				id: 2,
 				email: 'teste2@teste2.com.br',
-				name: 'alexandre 222',
+				name: 'alexandre reveilleau dos reis 222',
 				phoneNumber: '54 2222-22222'
 			},
 		]
-		console.log(this.contacts)
+		console.log(this.filteredContacts)
 	}
 
 }
