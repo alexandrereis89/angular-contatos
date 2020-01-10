@@ -19,4 +19,11 @@ export class HomeComponent implements OnInit {
       sessionStorage.setItem('contactList', JSON.stringify(this.contacts));
    }
 
+   filterAlbuns = (word: string) => {
+      console.log(word)
+      this.filteredContacts = this.contacts.filter(contact =>
+         contact.name.includes(word)
+      );
+   };
+
 }

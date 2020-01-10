@@ -1,8 +1,8 @@
 <app-header></app-header>
-<app-search></app-search>
+<app-search (searchInputEvent)="filterAlbuns($event)"></app-search>
 <button class="btn-add" mat-flat-button color="primary" routerLink="/novo" aria-label="novo">
    Adicionar Contato
 </button>
 <section class="container">
-   <app-contact-list [contacts]="contacts"></app-contact-list>
+   <app-contact-list [contacts]="filteredContacts"></app-contact-list>
 </section>
